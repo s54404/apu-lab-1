@@ -1,0 +1,340 @@
+> print("A")
+[1] "A"
+> a <- 20/log(2.78)
+> b <- 3 * a
+> min(a, b)
+[1] 19.56084
+> print("B")
+[1] "B"
+> help(abs)
+> print("C")
+[1] "C"
+> a <- 8:75
+> kwadraty <- a^2
+> mean(kwadraty)
+[1] 2107.5
+> print("D")
+[1] "D"
+> apropos("plot")
+ [1] ".rs.api.savePlotAsImage"                ".rs.replayNotebookPlots"               
+ [3] ".rs.replayNotebookPlotsPackages"        ".rs.reticulate.hookedMatplotlibModules"
+ [5] ".rs.reticulate.matplotlib.onLoaded"     ".rs.reticulate.matplotlib.showHook"    
+ [7] "assocplot"                              "barplot"                               
+ [9] "barplot.default"                        "biplot"                                
+[11] "boxplot"                                "boxplot.default"                       
+[13] "boxplot.matrix"                         "boxplot.stats"                         
+[15] "cdplot"                                 "coplot"                                
+[17] "fourfoldplot"                           "interaction.plot"                      
+[19] "lag.plot"                               "matplot"                               
+[21] "monthplot"                              "mosaicplot"                            
+[23] "plot"                                   "plot"                                  
+[25] "plot.default"                           "plot.design"                           
+[27] "plot.ecdf"                              "plot.function"                         
+[29] "plot.new"                               "plot.spec.coherency"                   
+[31] "plot.spec.phase"                        "plot.stepfun"                          
+[33] "plot.ts"                                "plot.window"                           
+[35] "plot.xy"                                "preplot"                               
+[37] "qqplot"                                 "recordPlot"                            
+[39] "replayPlot"                             "savePlot"                              
+[41] "screeplot"                              "spineplot"                             
+[43] "sunflowerplot"                          "termplot"                              
+[45] "ts.plot"                               
+> print("E")
+[1] "E"
+> setwd("C:/Users/adrian/Desktop/APU_LAB1")
+> a <- "tablet"
+> write.table(a, file = "zmienna_a.txt")
+> rm(a)
+> print(a)
+BŁĄD: nie znaleziono obiektu 'a'
+> a <- read.table("zmienna_a.txt")
+> print(a)
+       x
+1 tablet
+> print("F")
+[1] "F"
+> install.packages("gridExtra")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+próbowanie adresu URL 'https://cran.rstudio.com/bin/windows/contrib/4.3/gridExtra_2.3.zip'
+Content type 'application/zip' length 1109348 bytes (1.1 MB)
+downloaded 1.1 MB
+
+pakiet ‘gridExtra’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+
+Pobrane pakiety binarne są w
+	C:\Users\adrian\AppData\Local\Temp\RtmpSm9uJr\downloaded_packages
+> library(gridExtra)
+> grid.table(head(volcano, 10))
+> print("G")
+[1] "G"
+> wektor <- seq(1000, 200, by = -8)
+> print("H")
+[1] "H"
+> a <- 50:30
+> b <- 4:50
+> d <- c(b, a)
+> print(d)
+ [1]  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30
+[28] 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 50 49 48 47 46 45 44
+[55] 43 42 41 40 39 38 37 36 35 34 33 32 31 30
+> print("I")
+[1] "I"
+> nazwa <- c("Apple iPad 2021 - 10.2","Apple iPad Air 2022 Szary","Apple iPad (10gen) 2022","Apple iPad Air 2022 Niebieski","Apple iPad Pro 2022","Apple iPad Air 2019","Apple iPad Air 2022 Niebieski","Apple iPad Pro 2022","Apple iPad mini 2021","Apple iPad Pro 2022")
+> modem <- c("LTE","5G","5G","5G","5G","WiFi","5G","5G","5G","5G")
+> wyświetlacz <- c(10.2,10.9,10.9,10.9,12.9,10.5,10.9,11,8.3,12.9)
+> pamięć_RAM <- c(8,8,8,8,8,3,8,16,8,8)
+> pamięć_wbudowana <- c(64,64,64,64,128,256,256,2000,64,256)
+> cena <- c(1719,3299,3199,3299,6019,3699,4649,10369,2669,6699)
+> liczba_opinii <- c(76,23,2,10,7,4,14,0,20,1)
+> tablety <- data.frame(nazwa, modem, wyświetlacz, pamięć_RAM, pamięć_wbudowana, cena, liczba_opinii)
+> print(tablety)
+                           nazwa modem wyświetlacz pamięć_RAM pamięć_wbudowana  cena
+1         Apple iPad 2021 - 10.2   LTE        10.2          8               64  1719
+2      Apple iPad Air 2022 Szary    5G        10.9          8               64  3299
+3        Apple iPad (10gen) 2022    5G        10.9          8               64  3199
+4  Apple iPad Air 2022 Niebieski    5G        10.9          8               64  3299
+5            Apple iPad Pro 2022    5G        12.9          8              128  6019
+6            Apple iPad Air 2019  WiFi        10.5          3              256  3699
+7  Apple iPad Air 2022 Niebieski    5G        10.9          8              256  4649
+8            Apple iPad Pro 2022    5G        11.0         16             2000 10369
+9           Apple iPad mini 2021    5G         8.3          8               64  2669
+10           Apple iPad Pro 2022    5G        12.9          8              256  6699
+   liczba_opinii
+1             76
+2             23
+3              2
+4             10
+5              7
+6              4
+7             14
+8              0
+9             20
+10             1
+> srednia_cena <- mean(tablety$cena)
+> cat("Średnia cena tabletów: ", srednia_cena, "\n")
+Średnia cena tabletów:  4562 
+> print("J")
+[1] "J"
+> 
+> nowy_tablet <- data.frame(
++   nazwa = "iPad Air 3",
++   modem = "LTE",
++   wyświetlacz = "10.5 cala",
++   pamięć_RAM = "3 GB",
++   pamięć_wbudowana = "64 GB",
++   cena = 599,
++   liczba_opinii = 250
++ )
+> tablety <- rbind(tablety, nowy_tablet)
+> print(tablety)
+                           nazwa modem wyświetlacz pamięć_RAM pamięć_wbudowana  cena
+1         Apple iPad 2021 - 10.2   LTE        10.2          8               64  1719
+2      Apple iPad Air 2022 Szary    5G        10.9          8               64  3299
+3        Apple iPad (10gen) 2022    5G        10.9          8               64  3199
+4  Apple iPad Air 2022 Niebieski    5G        10.9          8               64  3299
+5            Apple iPad Pro 2022    5G        12.9          8              128  6019
+6            Apple iPad Air 2019  WiFi        10.5          3              256  3699
+7  Apple iPad Air 2022 Niebieski    5G        10.9          8              256  4649
+8            Apple iPad Pro 2022    5G          11         16             2000 10369
+9           Apple iPad mini 2021    5G         8.3          8               64  2669
+10           Apple iPad Pro 2022    5G        12.9          8              256  6699
+11                    iPad Air 3   LTE   10.5 cala       3 GB            64 GB   599
+   liczba_opinii
+1             76
+2             23
+3              2
+4             10
+5              7
+6              4
+7             14
+8              0
+9             20
+10             1
+11           250
+> 
+> 
+> srednia_cena <- mean(tablety$cena)
+> cat("Średnia cena tabletów: ", srednia_cena, "\n")
+Średnia cena tabletów:  4201.727 
+> print("k")
+[1] "k"
+> tablety$ocena_klientów <- seq(0, 5, by = 0.5)
+> tablety$ocena_klientów <- factor(tablety$ocena_klientów)
+> print(tablety)
+                           nazwa modem wyświetlacz pamięć_RAM pamięć_wbudowana  cena
+1         Apple iPad 2021 - 10.2   LTE        10.2          8               64  1719
+2      Apple iPad Air 2022 Szary    5G        10.9          8               64  3299
+3        Apple iPad (10gen) 2022    5G        10.9          8               64  3199
+4  Apple iPad Air 2022 Niebieski    5G        10.9          8               64  3299
+5            Apple iPad Pro 2022    5G        12.9          8              128  6019
+6            Apple iPad Air 2019  WiFi        10.5          3              256  3699
+7  Apple iPad Air 2022 Niebieski    5G        10.9          8              256  4649
+8            Apple iPad Pro 2022    5G          11         16             2000 10369
+9           Apple iPad mini 2021    5G         8.3          8               64  2669
+10           Apple iPad Pro 2022    5G        12.9          8              256  6699
+11                    iPad Air 3   LTE   10.5 cala       3 GB            64 GB   599
+   liczba_opinii ocena_klientów
+1             76              0
+2             23            0.5
+3              2              1
+4             10            1.5
+5              7              2
+6              4            2.5
+7             14              3
+8              0            3.5
+9             20              4
+10             1            4.5
+11           250              5
+> srednie_ceny_ocen <- tapply(tablety$cena, tablety$ocena_klientów, mean)
+> cat("Średnie ceny dla każdej oceny:\n")
+Średnie ceny dla każdej oceny:
+> print(srednie_ceny_ocen)
+    0   0.5     1   1.5     2   2.5     3   3.5     4   4.5     5 
+ 1719  3299  3199  3299  6019  3699  4649 10369  2669  6699   599 
+> nowe_tablety <- data.frame(
++   nazwa = c("iPad Pro 11", "iPad Pro 12.9", "iPad Mini 5", "iPad 9"),
++   modem = c("LTE", "LTE", "LTE", "LTE"),
++   wyświetlacz = c("11 cali", "12.9 cali", "7.9 cali", "10.2 cala"),
++   pamięć_RAM = c("4 GB", "6 GB", "3 GB", "3 GB"),
++   pamięć_wbudowana = c("128 GB", "256 GB", "64 GB", "32 GB"),
++   cena = c(799, 999, 399, 299),
++   liczba_opinii = c(150, 250, 100, 50),
++   ocena_klientów = factor(c(4.5, 4.0, 4.0, 3.5))
++ )
+> 
+> tablety <- rbind(tablety, nowe_tablety)
+> 
+> print(tablety)
+                           nazwa modem wyświetlacz pamięć_RAM pamięć_wbudowana  cena
+1         Apple iPad 2021 - 10.2   LTE        10.2          8               64  1719
+2      Apple iPad Air 2022 Szary    5G        10.9          8               64  3299
+3        Apple iPad (10gen) 2022    5G        10.9          8               64  3199
+4  Apple iPad Air 2022 Niebieski    5G        10.9          8               64  3299
+5            Apple iPad Pro 2022    5G        12.9          8              128  6019
+6            Apple iPad Air 2019  WiFi        10.5          3              256  3699
+7  Apple iPad Air 2022 Niebieski    5G        10.9          8              256  4649
+8            Apple iPad Pro 2022    5G          11         16             2000 10369
+9           Apple iPad mini 2021    5G         8.3          8               64  2669
+10           Apple iPad Pro 2022    5G        12.9          8              256  6699
+11                    iPad Air 3   LTE   10.5 cala       3 GB            64 GB   599
+12                   iPad Pro 11   LTE     11 cali       4 GB           128 GB   799
+13                 iPad Pro 12.9   LTE   12.9 cali       6 GB           256 GB   999
+14                   iPad Mini 5   LTE    7.9 cali       3 GB            64 GB   399
+15                        iPad 9   LTE   10.2 cala       3 GB            32 GB   299
+   liczba_opinii ocena_klientów
+1             76              0
+2             23            0.5
+3              2              1
+4             10            1.5
+5              7              2
+6              4            2.5
+7             14              3
+8              0            3.5
+9             20              4
+10             1            4.5
+11           250              5
+12           150            4.5
+13           250              4
+14           100              4
+15            50            3.5
+> install.packages("ggplot2")
+WARNING: Rtools is required to build R packages but is not currently installed. Please download and install the appropriate version of Rtools before proceeding:
+
+https://cran.rstudio.com/bin/windows/Rtools/
+próbowanie adresu URL 'https://cran.rstudio.com/bin/windows/contrib/4.3/ggplot2_3.4.4.zip'
+Content type 'application/zip' length 4298448 bytes (4.1 MB)
+downloaded 4.1 MB
+
+pakiet ‘ggplot2’ został pomyślnie rozpakowany oraz sumy MD5 zostały sprawdzone
+
+Pobrane pakiety binarne są w
+	C:\Users\adrian\AppData\Local\Temp\RtmpSm9uJr\downloaded_packages
+> library(ggplot2)
+> ggplot(tablety, aes(x = ocena_klientów)) +
++   geom_bar() +
++   xlab("Ocena klientów") +
++   ylab("Liczba reprezentantów") +
++   ggtitle("Liczba reprezentantów według ocen klientów")
+> print("m")
+[1] "m"
+> udzial_ocen <- prop.table(table(tablety$ocena_klientów)) * 100
+> pie(udzial_ocen, labels = paste(udzial_ocen, "%"), main = "Procentowy udział ocen klientów")
+> 
+> barplot(udzial_ocen, main = "Procentowy udział ocen klientów", ylab = "Procent")
+> print("n")
+[1] "n"
+> tablety$status_opinii <- ifelse(tablety$liczba_opinii == 0, "nie ma",
++                                 ifelse(tablety$liczba_opinii < 50, "mniej 50 opinii",
++                                        ifelse(tablety$liczba_opinii <= 100, "50-100 opinii",
++                                               "więcej 100 opinii")))
+> 
+> tablety$status_opinii <- factor(tablety$status_opinii)
+> 
+> print(tablety)
+                           nazwa modem wyświetlacz pamięć_RAM pamięć_wbudowana  cena
+1         Apple iPad 2021 - 10.2   LTE        10.2          8               64  1719
+2      Apple iPad Air 2022 Szary    5G        10.9          8               64  3299
+3        Apple iPad (10gen) 2022    5G        10.9          8               64  3199
+4  Apple iPad Air 2022 Niebieski    5G        10.9          8               64  3299
+5            Apple iPad Pro 2022    5G        12.9          8              128  6019
+6            Apple iPad Air 2019  WiFi        10.5          3              256  3699
+7  Apple iPad Air 2022 Niebieski    5G        10.9          8              256  4649
+8            Apple iPad Pro 2022    5G          11         16             2000 10369
+9           Apple iPad mini 2021    5G         8.3          8               64  2669
+10           Apple iPad Pro 2022    5G        12.9          8              256  6699
+11                    iPad Air 3   LTE   10.5 cala       3 GB            64 GB   599
+12                   iPad Pro 11   LTE     11 cali       4 GB           128 GB   799
+13                 iPad Pro 12.9   LTE   12.9 cali       6 GB           256 GB   999
+14                   iPad Mini 5   LTE    7.9 cali       3 GB            64 GB   399
+15                        iPad 9   LTE   10.2 cala       3 GB            32 GB   299
+   liczba_opinii ocena_klientów     status_opinii
+1             76              0     50-100 opinii
+2             23            0.5   mniej 50 opinii
+3              2              1   mniej 50 opinii
+4             10            1.5   mniej 50 opinii
+5              7              2   mniej 50 opinii
+6              4            2.5   mniej 50 opinii
+7             14              3   mniej 50 opinii
+8              0            3.5            nie ma
+9             20              4   mniej 50 opinii
+10             1            4.5   mniej 50 opinii
+11           250              5 więcej 100 opinii
+12           150            4.5 więcej 100 opinii
+13           250              4 więcej 100 opinii
+14           100              4     50-100 opinii
+15            50            3.5     50-100 opinii
+> 
+> udzial_statusu_opinii <- prop.table(table(tablety$status_opinii)) * 100
+> 
+> pie(udzial_statusu_opinii, labels = paste(udzial_statusu_opinii, "%"), main = "Procentowy udział tabletów o konkretnym statusie opinii")
+> 
+> print("o")
+[1] "o"
+> zdania_o_tabletach <- paste(tablety$nazwa, "ma ocenę klientów", tablety$ocena_klientów, "bo ma liczbę opinii", tablety$liczba_opinii)
+> 
+> for (zdanie in zdania_o_tabletach) {
++   cat(zdanie, "\n")
++ }
+Apple iPad 2021 - 10.2 ma ocenę klientów 0 bo ma liczbę opinii 76 
+Apple iPad Air 2022 Szary ma ocenę klientów 0.5 bo ma liczbę opinii 23 
+Apple iPad (10gen) 2022 ma ocenę klientów 1 bo ma liczbę opinii 2 
+Apple iPad Air 2022 Niebieski ma ocenę klientów 1.5 bo ma liczbę opinii 10 
+Apple iPad Pro 2022 ma ocenę klientów 2 bo ma liczbę opinii 7 
+Apple iPad Air 2019 ma ocenę klientów 2.5 bo ma liczbę opinii 4 
+Apple iPad Air 2022 Niebieski ma ocenę klientów 3 bo ma liczbę opinii 14 
+Apple iPad Pro 2022 ma ocenę klientów 3.5 bo ma liczbę opinii 0 
+Apple iPad mini 2021 ma ocenę klientów 4 bo ma liczbę opinii 20 
+Apple iPad Pro 2022 ma ocenę klientów 4.5 bo ma liczbę opinii 1 
+iPad Air 3 ma ocenę klientów 5 bo ma liczbę opinii 250 
+iPad Pro 11 ma ocenę klientów 4.5 bo ma liczbę opinii 150 
+iPad Pro 12.9 ma ocenę klientów 4 bo ma liczbę opinii 250 
+iPad Mini 5 ma ocenę klientów 4 bo ma liczbę opinii 100 
+iPad 9 ma ocenę klientów 3.5 bo ma liczbę opinii 50 
+> 
+> print("p")
+[1] "p"
+> write.csv(tablety, file = "tablety.csv", row.names = FALSE)
+> wczytana_ramka <- read.csv("tablety.csv")
+> 
